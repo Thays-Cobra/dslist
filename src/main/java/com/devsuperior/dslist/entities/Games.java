@@ -14,6 +14,7 @@ public class Games {
     //PROPRIEDAES DA CLASSE
     //@Id: CHAVE PRIMÁRIA
     //@GeneratedValue: AUTO_INCREMENT
+    //@Column(columnDefinition = "TEXT") ANOTAÇÃO QUE INDICA QUE O CAMPO É DO TIPO TEXT (CAMPO LONGO)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -25,7 +26,11 @@ public class Games {
     private String platforms;
     private Double score;
     private String imgUrl;
+
+    @Column(columnDefinition = "TEXT")
     private String shortDescription;
+
+    @Column(columnDefinition = "TEXT")
     private String longDescription;
 
     //CONSTRUTORES
