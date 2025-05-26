@@ -9,7 +9,7 @@ import java.util.Objects;
 //@Table(name = "tb_game") ANOTAÇÃO QUE INDICA O NOME DA TABELA NO BANCO DE DADOS
 @Entity
 @Table(name = "tb_game")
-public class Games {
+public class Game {
 
     //PROPRIEDAES DA CLASSE
     //@Id: CHAVE PRIMÁRIA
@@ -34,12 +34,12 @@ public class Games {
     private String longDescription;
 
     //CONSTRUTORES
-    public Games() {
+    public Game() {
     }
 
     //CONSTRUTOR COM TODOS OS ARGUMENTOS
-    public Games(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
-            String shortDescription, String longDescription) {
+    public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
+                String shortDescription, String longDescription) {
         this.id = id;
         this.title = title;
         this.year = year;
@@ -128,7 +128,7 @@ public class Games {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        Games games = (Games) o;
+        Game games = (Game) o;
         return Objects.equals(id, games.id);
     }
 
